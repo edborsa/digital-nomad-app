@@ -1,34 +1,69 @@
+import { Icon } from '@/src/components/Icon';
+import { useAppTheme } from '@/src/theme/useAppTheme';
 import { Tabs } from 'expo-router';
 import React from 'react';
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+  const { colors } = useAppTheme();
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.gray2,
+        tabBarStyle: {
+          backgroundColor: colors.background,
+          paddingTop: 10,
+          height: 90,
+          borderTopWidth: 0,
+        },
+        tabBarLabelStyle: {
+          fontFamily: 'PoppinsRegular',
+          fontSize: 12,
+          color: colors.text,
+        },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Início',
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Icon
+                name={focused ? 'Home-fill' : 'Home-outline'}
+                color={focused ? 'primary' : 'gray2'}
+              />
+            );
+          },
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Explorar',
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Icon
+                name={'Explore'}
+                color={focused ? 'primary' : 'gray2'}
+              />
+            );
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Perfil',
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Icon
+                name={focused ? 'Person-fill' : 'Person-outline'}
+                color={focused ? 'primary' : 'gray2'}
+              />
+            );
+          },
         }}
       />
     </Tabs>
