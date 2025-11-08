@@ -21,17 +21,17 @@ export default function HomeScreen() {
 
   return (
     <Screen
-      flex={1}
       backgroundColor="background"
+      flex={1}
     >
       <FlatList
         ref={flatListRef}
         contentContainerStyle={{ gap: spacing.padding, paddingTop: top, paddingBottom: spacing.padding }}
         data={cityPreviewList}
-        renderItem={renderItem}
-        showsVerticalScrollIndicator={false}
         keyExtractor={(item) => item.id}
         ListHeaderComponent={<CityFilter />}
+        renderItem={renderItem}
+        showsVerticalScrollIndicator={false}
       />
     </Screen>
   );

@@ -13,9 +13,9 @@ export function Icon({ name, color = 'gray2', size = 24 }: IconProps) {
   const { colors } = useAppTheme();
   return (
     <IconFromIcoMoon
+      color={colors[color]}
       name={name}
       size={size}
-      color={colors[color]}
     />
   );
 }

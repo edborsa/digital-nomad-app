@@ -5,9 +5,9 @@ describe('SearchInput Component', () => {
   it('renders with placeholder text', () => {
     const { getByPlaceholderText } = renderWithTheme(
       <SearchInput
+        placeholder="Search cities"
         value=""
         onChangeText={jest.fn()}
-        placeholder="Search cities"
       />
     );
     expect(getByPlaceholderText('Search cities')).toBeTruthy();
@@ -16,9 +16,9 @@ describe('SearchInput Component', () => {
   it('displays the correct initial value', () => {
     const { getByDisplayValue } = renderWithTheme(
       <SearchInput
+        placeholder="Search"
         value="Paris"
         onChangeText={jest.fn()}
-        placeholder="Search"
       />
     );
     expect(getByDisplayValue('Paris')).toBeTruthy();
@@ -28,9 +28,9 @@ describe('SearchInput Component', () => {
     const mockOnChangeText = jest.fn();
     const { getByPlaceholderText } = renderWithTheme(
       <SearchInput
+        placeholder="Search"
         value=""
         onChangeText={mockOnChangeText}
-        placeholder="Search"
       />
     );
 
@@ -44,9 +44,9 @@ describe('SearchInput Component', () => {
   it('shows search icon when input is empty', () => {
     const { getByTestId } = renderWithTheme(
       <SearchInput
+        placeholder="Search"
         value=""
         onChangeText={jest.fn()}
-        placeholder="Search"
       />
     );
 
@@ -56,9 +56,9 @@ describe('SearchInput Component', () => {
   it('shows close icon when input has text', () => {
     const { getByTestId } = renderWithTheme(
       <SearchInput
+        placeholder="Search"
         value="test"
         onChangeText={jest.fn()}
-        placeholder="Search"
       />
     );
 
@@ -69,9 +69,9 @@ describe('SearchInput Component', () => {
     const mockOnChangeText = jest.fn();
     const { getByTestId } = renderWithTheme(
       <SearchInput
+        placeholder="Search"
         value="Barcelona"
         onChangeText={mockOnChangeText}
-        placeholder="Search"
       />
     );
 
@@ -89,9 +89,9 @@ describe('SearchInput Component', () => {
     const mockOnChangeText = jest.fn();
     const { getByTestId } = renderWithTheme(
       <SearchInput
+        placeholder="Search"
         value=""
         onChangeText={mockOnChangeText}
-        placeholder="Search"
       />
     );
 
@@ -108,9 +108,9 @@ describe('SearchInput Component', () => {
   it('handles focus state changes', () => {
     const { getByPlaceholderText } = renderWithTheme(
       <SearchInput
+        placeholder="Search"
         value=""
         onChangeText={jest.fn()}
-        placeholder="Search"
       />
     );
 
@@ -129,9 +129,9 @@ describe('SearchInput Component', () => {
   it('updates icon when value changes from empty to filled', () => {
     const { getByTestId, rerender } = renderWithTheme(
       <SearchInput
+        placeholder="Search"
         value=""
         onChangeText={jest.fn()}
-        placeholder="Search"
       />
     );
 
@@ -141,9 +141,9 @@ describe('SearchInput Component', () => {
     // Re-render with text
     rerender(
       <SearchInput
+        placeholder="Search"
         value="Paris"
         onChangeText={jest.fn()}
-        placeholder="Search"
       />
     );
 

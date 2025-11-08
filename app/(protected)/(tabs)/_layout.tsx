@@ -31,8 +31,8 @@ export default function TabLayout() {
           tabBarIcon: ({ focused }) => {
             return (
               <Icon
-                name={focused ? 'Home-fill' : 'Home-outline'}
                 color={focused ? 'primary' : 'gray2'}
+                name={focused ? 'Home-fill' : 'Home-outline'}
               />
             );
           },
@@ -45,8 +45,8 @@ export default function TabLayout() {
           tabBarIcon: ({ focused }) => {
             return (
               <Icon
-                name={'Explore'}
                 color={focused ? 'primary' : 'gray2'}
+                name={'Explore'}
               />
             );
           },
@@ -59,8 +59,8 @@ export default function TabLayout() {
           tabBarIcon: ({ focused }) => {
             return (
               <Icon
-                name={focused ? 'Person-fill' : 'Person-outline'}
                 color={focused ? 'primary' : 'gray2'}
+                name={focused ? 'Person-fill' : 'Person-outline'}
               />
             );
           },

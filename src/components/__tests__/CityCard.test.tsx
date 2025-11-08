@@ -1,4 +1,4 @@
-import { renderWithTheme, fireEvent } from '@/src/test-utils';
+import { renderWithTheme } from '@/src/test-utils';
 import { mockCityPreview, mockCityPreviewBarcelona } from '@/src/test-utils/mockData';
 import { CityCard } from '../CityCard';
 
@@ -81,9 +81,7 @@ describe('CityCard Component', () => {
     };
 
     const { getByText } = renderWithTheme(<CityCard cityPreview={longNameCity} />);
-    expect(
-      getByText('This Is A Very Long City Name That Should Still Render Correctly')
-    ).toBeTruthy();
+    expect(getByText('This Is A Very Long City Name That Should Still Render Correctly')).toBeTruthy();
   });
 
   it('handles long country names without crashing', () => {

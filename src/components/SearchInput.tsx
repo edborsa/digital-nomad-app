@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { TextInput, TextInputProps } from 'react-native';
 import { useAppTheme } from '../theme/useAppTheme';
 import { Box, BoxProps } from './Box';
-import { Icon } from './Icon';
 import { IconButton } from './IconButton';
 
 type SearchInputProps = {} & Pick<TextInputProps, 'value' | 'onChangeText' | 'placeholder'>;
@@ -22,12 +21,9 @@ export function SearchInput({ value, onChangeText, placeholder }: SearchInputPro
       style={{ borderColor: isFocused ? colors.primary : colors.gray1 }}
     >
       <TextInput
-        value={value}
-        onChangeText={onChangeText}
         placeholder={placeholder}
         placeholderTextColor={colors.text}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
+        value={value}
         style={{
           ...textVariants.title16,
           color: colors.text,
@@ -36,6 +32,9 @@ export function SearchInput({ value, onChangeText, placeholder }: SearchInputPro
           width: '100%',
           flexShrink: 1,
         }}
+        onBlur={() => setIsFocused(false)}
+        onChangeText={onChangeText}
+        onFocus={() => setIsFocused(true)}
       />
       <IconButton
         iconName={value!.length > 0 ? 'Close' : 'Search-outline'}

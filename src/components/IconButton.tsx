@@ -12,17 +12,17 @@ export function IconButton({ iconName, onPress }: IconButtonProps) {
   return (
     <Pressable onPress={onPress}>
       <Box
+        alignItems="center"
         backgroundColor="primary"
-        width={50}
+        borderRadius="rounded"
         height={50}
         justifyContent="center"
-        alignItems="center"
-        borderRadius="rounded"
         style={{ boxShadow: boxShadows.primary }}
+        width={50}
       >
         <Icon
-          name={iconName}
           color="pureWhite"
+          name={iconName}
         />
       </Box>
     </Pressable>

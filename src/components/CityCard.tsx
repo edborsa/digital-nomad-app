@@ -17,26 +17,26 @@ export function CityCard({ cityPreview, style }: CityCardProps) {
   const { borderRadii } = useAppTheme();
   return (
     <Link
-      push
-      href={`/city-details/${cityPreview.id}`}
       asChild
+      href={`/city-details/${cityPreview.id}`}
+      push
     >
       <Pressable>
         <ImageBackground
+          imageStyle={{ borderRadius: borderRadii.default }}
           source={cityPreview.coverImage}
           style={[{ width: '100%', height: 280 }, style]}
-          imageStyle={{ borderRadius: borderRadii.default }}
         >
           <BlackOpacity />
           <Box
             flex={1}
-            padding="s24"
             justifyContent="space-between"
+            padding="s24"
           >
             <Box alignSelf="flex-end">
               <Icon
-                name="Favorite-outline"
                 color="text"
+                name="Favorite-outline"
               />
             </Box>
 

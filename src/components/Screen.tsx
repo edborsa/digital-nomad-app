@@ -7,8 +7,8 @@ export function Screen({ children, scrollable = false, ...boxProps }: PropsWithC
 
   return (
     <Box
-      flex={1}
       backgroundColor="background"
+      flex={1}
       paddingHorizontal="padding"
       {...boxProps}
     >

@@ -38,20 +38,19 @@ export const mockCity: City = {
   name: 'Paris',
   country: 'France',
   coverImage: 12345,
-  description:
-    'Paris, the City of Light, is renowned for its art, fashion, gastronomy, and culture. Home to iconic landmarks like the Eiffel Tower and the Louvre.',
+  description: 'Paris, the City of Light, is renowned for its art, fashion, gastronomy, and culture. Home to iconic landmarks like the Eiffel Tower and the Louvre.',
   touristAttractions: [
     {
       id: 'attr-1',
       name: 'Eiffel Tower',
       description: 'Iconic iron lattice tower',
-      image: 11111,
+      cityId: 'city-1',
     },
     {
       id: 'attr-2',
       name: 'Louvre Museum',
       description: 'World-famous art museum',
-      image: 22222,
+      cityId: 'city-1',
     },
   ],
   location: {
@@ -67,14 +66,13 @@ export const mockCityBarcelona: City = {
   name: 'Barcelona',
   country: 'Spain',
   coverImage: 67890,
-  description:
-    'Barcelona is known for its art and architecture, particularly the Sagrada Família and other works by Antoni Gaudí.',
+  description: 'Barcelona is known for its art and architecture, particularly the Sagrada Família and other works by Antoni Gaudí.',
   touristAttractions: [
     {
       id: 'attr-3',
       name: 'Sagrada Família',
       description: 'Unfinished basilica by Gaudí',
-      image: 33333,
+      cityId: 'city-2',
     },
   ],
   location: {
