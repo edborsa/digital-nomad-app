@@ -1,10 +1,7 @@
 import { PropsWithChildren } from 'react';
-import { ScrollView, View } from 'react-native';
 import { Box, BoxProps } from './Box';
 
-export function Screen({ children, scrollable = false, ...boxProps }: PropsWithChildren & BoxProps & { scrollable?: boolean }) {
-  const Container = scrollable ? ScrollView : View;
-
+export function Screen({ children, ...boxProps }: PropsWithChildren & BoxProps) {
   return (
     <Box
       backgroundColor="background"
@@ -12,7 +9,7 @@ export function Screen({ children, scrollable = false, ...boxProps }: PropsWithC
       paddingHorizontal="padding"
       {...boxProps}
     >
-      <Container>{children}</Container>
+      {children}
     </Box>
   );
 }
