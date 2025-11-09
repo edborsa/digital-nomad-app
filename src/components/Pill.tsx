@@ -10,6 +10,8 @@ export type PillProps = {
   onPress?: PressableProps['onPress'];
 };
 
+export const PILL_HEIGHT = 38;
+
 export function Pill({ label, iconName, active, onPress }: PillProps) {
   return (
     <Pressable onPress={onPress}>

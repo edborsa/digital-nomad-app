@@ -1,6 +1,6 @@
 import { Screen } from '@/src/components/Screen';
 import { Text } from '@/src/components/Text';
-import CityDetailsHeader from '@/src/containers/CityDetailsHeader';
+import { CityDetailsHeader } from '@/src/containers/CityDetailsHeader';
 import CityDetailsInfo from '@/src/containers/CityDetailsInfo';
 import CityDetailsMap from '@/src/containers/CityDetailsMap';
 import CityDetailsRelatedCities from '@/src/containers/CityDetailsRelatedCities';
@@ -27,9 +27,9 @@ export default function CityDetails() {
   return (
     <Screen>
       <CityDetailsHeader
-        categories={city?.categories || []}
-        coverImage={city?.coverImage}
-        id={city?.id}
+        categories={city.categories}
+        coverImage={city.coverImage}
+        id={city.id}
       />
       <CityDetailsInfo />
       <CityDetailsTouristicAttractions />
