@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+.expo/
+ios/
+android/
+dist/
+build/
+coverage/
+
+# Generated files
+.rnstorybook/storybook.requires.ts
+
+# Config files
+yarn.lock
+package-lock.json
+
+# Test and tooling
+.maestro/
+
+# Storybook
+.storybook/
+storybook-static/

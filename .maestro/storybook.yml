@@ -1,0 +1,6 @@
+appId: com.dadinho94.digital-nomad-app
+---
+- launchApp
+- assertVisible: 'Open Storybook'
+- tapOn: 'Open Storybook'
+- assertVisible: 'MyButton'

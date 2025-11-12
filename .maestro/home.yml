@@ -1,0 +1,4 @@
+appId: com.dadinho94.digital-nomad-app
+---
+- launchApp
+- assertVisible: 'Hello World (storybook disabled)'
