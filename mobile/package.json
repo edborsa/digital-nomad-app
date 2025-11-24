@@ -4,16 +4,16 @@
   "main": "expo-router/entry",
   "license": "MIT",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
+    "start": "dotenv -e .env -- expo start",
+    "android": "dotenv -e .env -- expo start --android",
+    "ios": "dotenv -e .env -- expo start --ios",
+    "web": "dotenv -e .env -- expo start --web",
     "storybook:web": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "storybook-generate": "sb-rn-get-stories",
-    "storybook": "cross-env EXPO_PUBLIC_STORYBOOK_ENABLED='true' expo start",
-    "storybook:ios": "cross-env EXPO_PUBLIC_STORYBOOK_ENABLED='true' expo start --ios",
-    "storybook:android": "cross-env EXPO_PUBLIC_STORYBOOK_ENABLED='true' expo start --android"
+    "storybook": "dotenv -e .env.storybook -- expo start",
+    "storybook:ios": "dotenv -e .env.storybook -- expo start --ios",
+    "storybook:android": "dotenv -e .env.storybook -- expo start --android"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^5.2.6",
@@ -54,6 +54,7 @@
     "@types/react": "~19.1.10",
     "babel-plugin-react-docgen-typescript": "^1.5.1",
     "cross-env": "^10.0.0",
+    "dotenv-cli": "^11.0.0",
     "storybook": "^10.0.0",
     "typescript": "~5.9.2",
     "vite": "^7.1.12"
