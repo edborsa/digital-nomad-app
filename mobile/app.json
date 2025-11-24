@@ -9,11 +9,13 @@
   "userInterfaceStyle": "automatic",
   "ios": {
     "supportsTablet": true,
+    "bundleIdentifier": "com.digitalnomad.app",
     "infoPlist": {
       "ITSAppUsesNonExemptEncryption": false
     }
   },
   "android": {
+    "package": "com.digitalnomad.app",
     "adaptiveIcon": {
       "foregroundImage": "./assets/adaptive-icon.png",
       "backgroundColor": "#FFFFFF"

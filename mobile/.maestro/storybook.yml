@@ -1,0 +1,6 @@
+appId: com.digitalnomad.app
+---
+- launchApp
+- assertVisible: 'Open Storybook'
+- tapOn: 'Open Storybook'
+- assertVisible: 'MyButton'
