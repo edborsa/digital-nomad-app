@@ -12,3 +12,8 @@
 - There is a .env in the root, you can enable and disable.
   We added dotenv-cli so that we could use .env.
   Once you toggle the `EXPO_PUBLIC_STORYBOOK_ENABLED`, be sure to reload the app inside expo.
+
+- Maybe to build to run maestro?
+  - `npx expo prebuild --clean`
+- Maybe to run just the app
+  - `npx expo run:ios`

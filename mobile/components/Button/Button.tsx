@@ -1,4 +1,4 @@
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 interface MyButtonProps {
   onPress: () => void;
@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 32,
     paddingVertical: 8,
-    backgroundColor: "purple",
-    alignSelf: "flex-start",
+    backgroundColor: 'purple',
+    alignSelf: 'flex-start',
     borderRadius: 8,
   },
-  text: { color: "white", fontSize: 16, fontWeight: "bold" },
+  text: { color: 'white', fontSize: 16, fontWeight: 'bold' },
 });

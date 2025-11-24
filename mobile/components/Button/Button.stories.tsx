@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from "@storybook/react-native";
-import { fn } from "storybook/test";
-import { View } from "react-native";
-import { MyButton } from "./Button";
+import type { Meta, StoryObj } from '@storybook/react-native';
+import { fn } from 'storybook/test';
+import { View } from 'react-native';
+import { MyButton } from './Button';
 
 const meta = {
-  title: "MyButton",
+  title: 'MyButton',
   component: MyButton,
   args: {
-    text: "Hello world",
+    text: 'Hello world',
   },
   decorators: [
-    (Story) => (
+    Story => (
       <View style={{ padding: 16 }}>
         <Story />
       </View>
