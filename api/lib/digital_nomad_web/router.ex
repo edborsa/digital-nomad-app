@@ -21,9 +21,10 @@ defmodule DigitalNomadWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", DigitalNomadWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", DigitalNomadWeb do
+    pipe_through :api
+    get "/dummy", DummyController, :index
+  end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:digital_nomad, :dev_routes) do
