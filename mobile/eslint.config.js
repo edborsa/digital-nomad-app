@@ -7,6 +7,7 @@ const compat = new FlatCompat({
 
 module.exports = [
   ...compat.extends('eslint-config-expo', 'plugin:prettier/recommended'),
+  ...compat.extends('plugin:import/recommended', 'plugin:import/typescript'),
   {
     ignores: [
       'node_modules/**',
@@ -20,5 +21,33 @@ module.exports = [
       'jest.setup.js',
       'jest.config.js',
     ],
+  },
+  {
+    settings: {
+      'import/resolver': {
+        typescript: {
+          alwaysTryTypes: true,
+          project: './tsconfig.json',
+        },
+        node: {
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        },
+      },
+    },
+    rules: {
+      // Prefer absolute imports using @ aliases over relative imports
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['../*'],
+              message:
+                'Please use absolute imports with @ aliases instead of relative parent imports.',
+            },
+          ],
+        },
+      ],
+    },
   },
 ];

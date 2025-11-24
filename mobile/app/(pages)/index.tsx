@@ -1,7 +1,7 @@
 import { Link } from 'expo-router';
 import { Text, View, ActivityIndicator, StyleSheet } from 'react-native';
-import { useApi } from '../../hooks/useApi';
-import { api } from '../../services/api';
+import { useApi } from '@hooks/useApi';
+import { api } from '@services/api';
 
 export default function Index() {
   const { data, loading, error } = useApi(() => api.getDummyData());

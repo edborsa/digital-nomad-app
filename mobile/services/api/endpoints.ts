@@ -4,7 +4,7 @@
  * Type-safe API endpoint definitions with request/response types.
  */
 
-import { apiClient } from './client';
+import { apiClient } from '@services/api/client';
 
 /**
  * Response types

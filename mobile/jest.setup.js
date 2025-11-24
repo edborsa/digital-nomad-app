@@ -107,3 +107,13 @@ jest.mock('react-native-gesture-handler', () => {
     Directions: {},
   };
 });
+
+// Mock fetch API
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+    ok: true,
+    status: 200,
+    json: async () => ({ data: { dummy_value: 'bar' } }),
+    statusText: 'OK',
+  })
+);

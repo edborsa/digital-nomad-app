@@ -5,7 +5,7 @@
  */
 
 import { useState, useEffect, useCallback } from 'react';
-import { ApiError } from '../services/api';
+import { ApiError } from '@services/api';
 
 interface UseApiState<T> {
   data: T | null;
