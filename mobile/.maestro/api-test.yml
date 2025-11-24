@@ -1,0 +1,21 @@
+appId: com.digitalnomad.app
+---
+# API Integration Test
+# Tests that the app successfully connects to the backend API
+
+- launchApp
+- assertVisible: 'Hello World (storybook disabled)'
+
+# Wait for API call to complete and data to load
+- assertVisible: 'API Test:'
+
+# Check that loading completes and success message appears
+- extendedWaitUntil:
+    visible: '✓ API Connected!'
+    timeout: 10000
+
+# Verify the dummy value from API is displayed
+- assertVisible: 'Dummy Value: bar'
+
+# Verify API URL is shown
+- assertVisible: 'API URL: http://localhost:4583'

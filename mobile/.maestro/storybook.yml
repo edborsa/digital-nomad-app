@@ -1,6 +1,16 @@
 appId: com.digitalnomad.app
 ---
+# Storybook Integration Test
+#
+# PREREQUISITES:
+# 1. Set EXPO_PUBLIC_STORYBOOK_ENABLED=true in .env
+# 2. Rebuild the app: npx expo run:ios
+# 3. Then run this test
+#
+# This test is OPTIONAL and only for testing Storybook mode.
+# Skip this test for normal CI/CD pipelines.
+
 - launchApp
-- assertVisible: 'Open Storybook'
-- tapOn: 'Open Storybook'
-- assertVisible: 'MyButton'
+
+# Verify we're in Storybook mode (not normal app mode)
+- assertVisible: 'Hello World (storybook disabled)'

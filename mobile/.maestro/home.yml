@@ -1,4 +1,15 @@
 appId: com.digitalnomad.app
 ---
+# Home Screen Test
+# Tests the default home screen and basic API connectivity
+
 - launchApp
 - assertVisible: 'Hello World (storybook disabled)'
+
+# Verify API section is visible
+- assertVisible: 'API Test:'
+
+# Wait for API call to complete
+- extendedWaitUntil:
+    visible: '✓ API Connected!'
+    timeout: 10000
